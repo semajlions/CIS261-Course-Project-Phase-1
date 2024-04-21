@@ -29,10 +29,44 @@ def prinfo(empName, hours, hourlyRate, gPay, taxRate, incomeTax, netPay):
     
 def PrinTotals(totalEmployees, totalHours, totalGrossPay, totalTax, totalNetPay):
     print(f"\nTotal number of employees: {totalemployees}" )
-        print(f"Total hours: {totalHours}:, .2f" )
-        print(f"Total gross pay: {totalGrossPay}:, .2f" )
-        print(f" Total tax: {totalTax}:, .2f" )
-        print(f" Total netpay: {totalNetPay}:, .2f" )
+    print(f"Total hours: {totalHours}:,.2f")
+    print(f"Total gross pay: {totalGrossPay}:, .2f" )
+    print(f"Total tax: {totalTax}:, .2f" )
+    print(f"Total netpay: {totalNetPay}:, .2f" )
+    
+    if __name__ ==" __main":
+        totalEmployees = 0
+        totalHours = 0.00
+        totalGrossPay = 0.00
+        totaltax = 0.00
+        totalNetPay = 0.00
+        
+        while True:
+            empName = getEmpName()
+            if (empName.upper() == "END"):
+                break
+            hours = getHoursWorked()
+            hourlyRate = getHourlyRate()
+            taxRate = getTaxRate()
+            gPay, incomeTax, netPay = CalcTaxAndNetPay(hours, hourlyRate, taxRate)
+            printinfo(empName, hours, hourRate, gPay, taxRate, incomeTax, netPay)
+            
+            totalEmployees += 1
+            totalHours += hours
+            totalGrossPay += gPay
+            totalTax += incomeTax
+            totalNetPay += netPay
+            
+    printTotals(totalEmployees, totalHours, totalGrossPay, totalTax, totalNetPay)
+        
+            
+            
+            
+
+
+            
+           
+
               
         
     
