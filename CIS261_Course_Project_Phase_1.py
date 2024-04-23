@@ -34,7 +34,7 @@ def PrintTotals(totalEmployees, totalHours, totalGrossPay, totalTax, totalNetPay
     print(f"Total tax: {totalTax}:, .2f" )
     print(f"Total netpay: {totalNetPay}:, .2f" )
     
-    if __name__ == " __main":
+    if __name__ == "__main":
         totalEmployees = 0
         totalHours = 0.00
         totalGrossPay = 0.00
@@ -58,7 +58,7 @@ def PrintTotals(totalEmployees, totalHours, totalGrossPay, totalTax, totalNetPay
             totalTax += incomeTax
             totalNetPay += netPay
             
-    PintTotals(totalEmployees, totalHours, totalGrossPay, totalTax, totalNetPay)
+    PrintTotals(totalEmployees, totalHours, totalGrossPay, totalTax, totalNetPay)
         
             
             
