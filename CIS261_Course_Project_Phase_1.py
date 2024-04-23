@@ -24,21 +24,21 @@ def CalcTaxAndNetPay(hours, hourlyRate, taxRate):
     netPay = gPay - incomeTax
     return gPay, incomeTax, netPay
 
-def prinfo(empName, hours, hourlyRate, gPay, taxRate, incomeTax, netPay):
+def printinfo(empName, hours, hourlyRate, gPay, taxRate, incomeTax, netPay):
     print(empName, f"{hours:, .2f}", f"{hourlyRate:, .2f}", f"{gPay:, .2f}", f"{taxRate:, .1%}", f"{incomeTax:, .2f}", f"{netPay:, .2f}" )
     
-def PrinTotals(totalEmployees, totalHours, totalGrossPay, totalTax, totalNetPay):
-    print(f"\nTotal number of employees: {totalemployees}" )
+def PrintTotals(totalEmployees, totalHours, totalGrossPay, totalTax, totalNetPay):
+    print(f"\nTotal number of employees: {totalEmployees}")
     print(f"Total hours: {totalHours}:,.2f")
     print(f"Total gross pay: {totalGrossPay}:, .2f" )
     print(f"Total tax: {totalTax}:, .2f" )
     print(f"Total netpay: {totalNetPay}:, .2f" )
     
-    if __name__ ==" __main":
+    if __name__ == " __main":
         totalEmployees = 0
         totalHours = 0.00
         totalGrossPay = 0.00
-        totaltax = 0.00
+        totalTax = 0.00
         totalNetPay = 0.00
         
         while True:
@@ -49,7 +49,8 @@ def PrinTotals(totalEmployees, totalHours, totalGrossPay, totalTax, totalNetPay)
             hourlyRate = getHourlyRate()
             taxRate = getTaxRate()
             gPay, incomeTax, netPay = CalcTaxAndNetPay(hours, hourlyRate, taxRate)
-            printinfo(empName, hours, hourRate, gPay, taxRate, incomeTax, netPay)
+            
+            printinfo(empName, hours, hourlyRate, gPay, taxRate, incomeTax, netPay)
             
             totalEmployees += 1
             totalHours += hours
@@ -57,7 +58,7 @@ def PrinTotals(totalEmployees, totalHours, totalGrossPay, totalTax, totalNetPay)
             totalTax += incomeTax
             totalNetPay += netPay
             
-    printTotals(totalEmployees, totalHours, totalGrossPay, totalTax, totalNetPay)
+    PintTotals(totalEmployees, totalHours, totalGrossPay, totalTax, totalNetPay)
         
             
             
