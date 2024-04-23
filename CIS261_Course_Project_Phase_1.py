@@ -1,7 +1,7 @@
 #James Carpenter
 #CIS261 Course Project Phase 1
 
-def gerEmpName():
+def getEmpName():
     empName = input("Enter employee name: ")
     return empName
 
